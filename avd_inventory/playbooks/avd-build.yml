@@ -1,6 +1,6 @@
 ---
 - name: Build Switch configuration
-  hosts: SITE1
+  hosts: SITE1_FABRIC
   gather_facts: false
 
   tasks:
