@@ -27,30 +27,8 @@ jobs:
       # - name: Run pre-commit on files
       #   uses: pre-commit/action@v3.0.0
 
-      # - name: Check paths for sites/site_1
-      #   uses: dorny/paths-filter@v2
-      #   id: filter-site1
-      #   with:
-      #     filters: |
-      #       workflows:
-      #         - 'sites/site_1/**'
-
-      # - name: Check paths for sites/site_2
-      #   uses: dorny/paths-filter@v2
-      #   id: filter-site2
-      #   with:
-      #     filters: |
-      #       workflows:
-      #         - 'sites/site_2/**'
-
       # - name: Install collections
       #   run: ansible-galaxy collection install -r requirements.yml
-      #   if: steps.filter-site1.outputs.workflows == 'true' || steps.filter-site2.outputs.workflows == 'true'
 
       # - name: Build and deploy site1
       #   run: make avd-build avd-deploy
-      #   if: steps.filter-site1.outputs.workflows == 'true'
-
-      # - name: Build and deploy site2
-      #   run: make build-site-2 cvp-site-2
-      #   if: steps.filter-site2.outputs.workflows == 'true'
