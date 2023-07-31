@@ -23,7 +23,7 @@ RUN wget https://github.com/mikefarah/yq/releases/download/${_YQ_VERSION}/${_YQ_
 # switch user to vscode otherwise Ansible will be installed as root
 USER vscode
 ENV PATH=$PATH:/home/vscode/.local/bin
-ENV ANSIBLE_CONFIG="/workspaces/avd-extended-workshop/avd_inventory/ansible.cfg"
+ENV ANSIBLE_CONFIG="/workspaces/arista-ci-codespace/avd_inventory/ansible.cfg"
 # install Ansible AVD collection
 RUN pip3 install "ansible-core>=2.13.1,<2.14.0" \
     && ansible-galaxy collection install arista.avd:==${_AVD_VERSION} \
