@@ -26,6 +26,7 @@
         "vscode": {
             "extensions": [
                 // git essentials
+                "github.vscode-github-actions",
                 "piotrpalarz.vscode-gitignore-generator",
                 "mhutchie.git-graph",
                 "eamodio.gitlens",
