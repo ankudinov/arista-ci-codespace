@@ -48,7 +48,7 @@ jobs:
       #   if: steps.filter-site1.outputs.workflows == 'true' || steps.filter-site2.outputs.workflows == 'true'
 
       # - name: Build and deploy site1
-      #   run: make build-site-1 cvp-site-1
+      #   run: make avd-build avd-deploy
       #   if: steps.filter-site1.outputs.workflows == 'true'
 
       # - name: Build and deploy site2
