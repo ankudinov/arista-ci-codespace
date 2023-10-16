@@ -1,4 +1,4 @@
-name: Deploy updates
+name: test with container
 
 on: workflow_dispatch
 
@@ -8,7 +8,9 @@ jobs:
       CVP_PASSWORD: ${{ secrets.CVP_PASSWORD }}
     timeout-minutes: 15
     runs-on: ubuntu-latest
-    container: ghcr.io/ankudinov/ansible-devcontainer/demo-base:4.1.0
+    container:
+      image: ghcr.io/ankudinov/ansible-devcontainer/demo-base:4.1.0
+      options: --user avd
     steps:
       - name: Hi
         run: echo "Hello World!"
