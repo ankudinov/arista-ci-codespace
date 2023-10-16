@@ -10,10 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/ankudinov/ansible-devcontainer/demo-base:4.1.0
-      options: --user root
+      # options: --user root
     steps:
       - name: Hi
         run: echo "Hello World!"
+
+      - name: check that git is in the path
+        run: |
+          apt update
+          apt install -y git
 
       - name: Checkout
         uses: actions/checkout@v3
