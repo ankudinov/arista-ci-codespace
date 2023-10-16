@@ -25,7 +25,7 @@ jobs:
         uses: pre-commit/action@v3.0.0
 
       - name: install ansible core
-        run: pip3 install ansible-core>=2.12.6,<2.16.0,!=2.13.0
+        run: pip3 install "ansible-core>=2.12.6,<2.16.0,!=2.13.0"
 
       - name: Install collections
         run: ansible-galaxy collection install arista.avd:==4.1.0
