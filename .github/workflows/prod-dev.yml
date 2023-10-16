@@ -1,0 +1,22 @@
+name: Deploy updates
+
+on: workflow_dispatch
+
+jobs:
+  deploy-prod:
+    env:
+      CVP_PASSWORD: ${{ secrets.CVP_PASSWORD }}
+    timeout-minutes: 15
+    runs-on: ghcr.io/ankudinov/ansible-devcontainer/demo-base:4.1.0
+    steps:
+      - name: Hi
+        run: echo "Hello World!"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run pre-commit on files
+        uses: pre-commit/action@v3.0.0
+
+      - name: Build and deploy site1
+        run: make avd_build avd_deploy
