@@ -7,7 +7,8 @@ jobs:
     env:
       CVP_PASSWORD: ${{ secrets.CVP_PASSWORD }}
     timeout-minutes: 15
-    runs-on: ghcr.io/ankudinov/ansible-devcontainer/demo-base:4.1.0
+    runs-on: ubuntu-latest
+    container: ghcr.io/ankudinov/ansible-devcontainer/demo-base:4.1.0
     steps:
       - name: Hi
         run: echo "Hello World!"
