@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/ankudinov/ansible-devcontainer/demo-base:4.1.0
-      options: --user avd
+      options: --user vscode
     steps:
       - name: Hi
         run: echo "Hello World!"
