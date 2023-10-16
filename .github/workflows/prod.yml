@@ -32,8 +32,8 @@ jobs:
           ansible-galaxy collection list
           echo ${USERNAME}
 
-      # - name: Install Python requirements
-      #   run: pip3 install -r /home/${USERNAME}/.ansible/collections/ansible_collections/arista/avd/requirements.txt
+      - name: Install Python requirements
+        run: pip3 install -r /home/runner/.ansible/collections/ansible_collections/arista/avd/requirements.txt
 
-      # - name: Build and deploy site1
-      #   run: make avd_build avd_deploy
+      - name: Build and deploy site1
+        run: make avd_build avd_deploy
