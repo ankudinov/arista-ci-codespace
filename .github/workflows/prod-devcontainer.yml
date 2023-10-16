@@ -17,8 +17,8 @@ jobs:
 
       - name: check that git is in the path
         run: |
-          apt update
-          apt install -y git
+          sudo apt-get update
+          sudo apt install -y --no-install-recommends git
 
       - name: Checkout
         uses: actions/checkout@v3
